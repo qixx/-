@@ -1,0 +1,42 @@
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+/**
+ * @author lenovo
+ *
+ */
+public class test
+{
+
+	
+	public static void main(String[] args)
+	{
+		SimpleDateFormat dateformat=new SimpleDateFormat("yyyy-mm-dd");
+		List<Date> list = new ArrayList<>(10);
+		//捕获十次次异常
+		/*for(int cnt = 0;cnt<10;cnt++)
+		{
+			try
+			{
+				Date date=dateformat.parse("09-12");
+				list.add(date);
+			}
+			catch(java.text.ParseException e)
+			{
+				e.printStackTrace();
+			}
+		}*/
+		//捕获一次次异常
+		try {
+			for(int cnt1=0;cnt1<10;cnt1++)
+			{
+				Date date=dateformat.parse("09-12");
+				list.add(date);
+			}
+			}catch(java.text.ParseException e)
+			{
+				e.printStackTrace();
+			}
+		}
+}
